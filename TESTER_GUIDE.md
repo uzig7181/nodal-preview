@@ -6,7 +6,7 @@ Nodal is a Windows desktop workspace for AI coding agents and terminals. This is
 
 | Requirement | Detail |
 |---|---|
-| Windows | Windows 10 or 11, 64-bit |
+| System | Windows 10 or 11, 64-bit; or Linux x86_64 (AppImage, see below). Not macOS. |
 | Codex CLI | Install with `npm install -g @openai/codex` (needs Node.js). Sign in once with `codex` in a terminal. Nodal uses **your own** ChatGPT/OpenAI account and plan. |
 | Smart App Control | If Windows Security → App & browser control → **Smart App Control** is **On**, Windows can block this unsigned preview. Nodal does not ask you to change this setting. |
 
@@ -17,6 +17,22 @@ Get-FileHash .\NodalPreview-0.1.0-setup.exe -Algorithm SHA256
 ```
 
 Nodal Preview installs as its own app. It does not change any other Nodal install.
+
+### Linux (x86_64)
+
+Download `NodalPreview-0.1.0-x86_64.AppImage` instead. Check it, make it executable, and run it:
+
+```bash
+sha256sum NodalPreview-0.1.0-x86_64.AppImage   # must print 164ac3315832f73f0f847aa2cd31b6512726841d641eea260879892400b12652
+chmod +x NodalPreview-0.1.0-x86_64.AppImage
+./NodalPreview-0.1.0-x86_64.AppImage
+```
+
+- Install the Codex CLI the same way (`npm install -g @openai/codex`, then sign in once with `codex`).
+- Ubuntu 22.04 and later may need FUSE for AppImages: `sudo apt install libfuse2` (on 24.04: `libfuse2t64`).
+- Settings and sessions live under `~/.config/Nodal Preview`. Terminals use your own `$SHELL`.
+- The Linux build is checked by automated tests on a clean Ubuntu machine. It has not been checked by hand on every desktop; tray and window behaviour can differ between GNOME, KDE, Wayland and X11.
+- This build does not run on macOS, and it does not run on ARM Linux (for example a Linux virtual machine on an Apple-chip Mac).
 
 ## What to try
 
