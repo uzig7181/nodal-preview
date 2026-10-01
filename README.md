@@ -1,5 +1,7 @@
 # Nodal Preview
 
+![Downloads](https://img.shields.io/github/downloads/uzig7181/nodal-preview/total)
+
 Nodal is a Windows desktop workspace for AI coding agents and terminals. It runs **Codex (ChatGPT)**, **Claude Code** and local **Ollama** models side by side, with a tabbed side panel for terminals, a web browser, a file explorer and a read-only change review.
 
 This repository hosts **beta builds for invited testers**. The source code is not published here.
