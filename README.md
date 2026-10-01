@@ -4,7 +4,15 @@
 
 Nodal is a Windows desktop workspace for AI coding agents and terminals. It runs **Codex (ChatGPT)**, **Claude Code** and local **Ollama** models side by side, with a tabbed side panel for terminals, a web browser, a file explorer and a read-only change review.
 
-This repository hosts **beta builds for invited testers**. The source code is not published here.
+This repository hosts **beta builds for invited testers**. The source code is not published here, but it is available on request.
+
+> [!WARNING]
+> **This beta installer is not yet signed with a code-signing certificate.** Windows therefore treats it as coming from an unknown publisher:
+>
+> - **SmartScreen** shows "Windows protected your PC". Select **More info**, then **Run anyway**, but only after you check the file's SHA-256 (see below).
+> - **Smart App Control**, if it is On, may block the installer completely. There is no per-app exception for it. The safest choice is to wait for a signed release.
+>
+> I plan to sign future releases with a proper certificate, and possibly to publish Nodal in the Microsoft Store, so these warnings go away. I am sorry for the inconvenience in the meantime. This is my first app release, so thank you for your patience!
 
 ## Download (beta 0.2.0)
 
